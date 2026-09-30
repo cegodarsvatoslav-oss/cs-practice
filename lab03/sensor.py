@@ -17,3 +17,4 @@ for i in range(n):
         cnt += 1
         if temp > mx: mx = temp
         if temp > thresh: thresh_cnt += 1
+print(cnt, error_cnt, thresh_cnt, round(mx, 1), round(sm/cnt, 1), sep = '\n')
