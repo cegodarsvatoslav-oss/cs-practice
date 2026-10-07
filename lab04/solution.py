@@ -1,9 +1,10 @@
+names =  ["Аня", "Боря", "Вика"]
+scores = [7.0,   9.0,    9.0]
 def winner(names, scores):
-    max = -1
-    for i in scores:
-        if max < i:
-            max = i
-    return names[scores.index(max)]
-print(winner(["Аня", "Боря", "Вика"], [7.0,   9.0,    9.0]))
+    return names[scores.index(max(scores))]
+def average(scores):
+    if len(scores) != 0:
+        return round(sum(scores)/len(scores),2)
+print(average(scores))
 
 
