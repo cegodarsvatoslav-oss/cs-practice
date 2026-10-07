@@ -14,3 +14,6 @@ def ranking(names, scores):
     b.sort(key = lambda x: -x[1])
     return [x[0] for x in b]
 
+def above_average(names, scores):
+    return [x for x in names if scores[names.index(x)]>average(scores)]
+print(above_average(names, scores))
