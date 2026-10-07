@@ -5,6 +5,12 @@ def winner(names, scores):
 def average(scores):
     if len(scores) != 0:
         return round(sum(scores)/len(scores),2)
-print(average(scores))
-
+    else:
+        return 0.0
+def ranking(names, scores):
+    b = []
+    for i in range(len(names)):
+        b.append([names[i], scores[i]])
+    b.sort(key = lambda x: -x[1])
+    return [x[0] for x in b]
 
