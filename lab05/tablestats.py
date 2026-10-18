@@ -26,10 +26,11 @@ def total_minutes(rows, kind):
     for row in rows:
         val = row.get('минуты', '')
         val = val.replace(',', '.')
-        try:
-            total_sum += float(val)
-        except ValueError:
-            continue
+        if row.get('тип') == kind:
+            try:
+                total_sum += float(val)
+            except ValueError:
+                continue
     return round(total_sum, 1)
 def to_csv(counts):
     lines = ['тип,количество']
