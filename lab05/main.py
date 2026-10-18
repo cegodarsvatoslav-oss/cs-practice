@@ -1,10 +1,12 @@
 from tablestats import read_rows, count_types
-
-with open('events.csv', encoding="utf-8") as table:
+filename = input().strip()
+with open(filename, encoding="utf-8") as table:
     rows = read_rows(table)
     
 counts = count_types(rows)
-print(counts)
+print(len(rows))
+print(len(counts))
+
 
 
 
