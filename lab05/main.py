@@ -13,6 +13,5 @@ with open("summary.csv", "w", encoding="utf-8") as out:
     out.write(to_csv(counts))
 
 
-if __name__ == "__main__":
-    main()
+
     
