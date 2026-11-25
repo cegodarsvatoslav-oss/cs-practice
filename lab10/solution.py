@@ -10,7 +10,7 @@ def rectangle(matrix, row_start, row_stop, column_start, column_stop):
 def replace_rectangle(matrix, row_start, row_stop, column_start, column_stop, value):
     arr = np.array(matrix)
     arr_copy = arr.copy()
-    arr_copy[row_start:row_stop+1,column_start:column_stop+1] = value
+    arr_copy[row_start:row_stop,column_start:column_stop] = value
     return arr_copy.tolist()
 
 def matrix_vector_product(matrix, vector):
@@ -25,7 +25,7 @@ def matrix_multiply(left, right):
 
 def transpose_matrix(matrix):
     a = np.array(matrix)
-    return a.T.tolist
+    return a.T
 
 def solve_system(matrix, vector):
     a1 = np.array(matrix)
@@ -38,8 +38,11 @@ def tensor_channel_mean(tensor):
     return arr.mean(axis=-1).tolist()
 
 def point_distance(first, second):
-    return np.linalg.norm(first - second)
+    a1 = np.array(first)
+    a2 = np.array(second)
+    return np.linalg.norm(a1 - a2)
 
-
+print(replace_rectangle([[1, 2], 
+                         [3, 4]], 0, 1, 0, 2, -1))
 
 
