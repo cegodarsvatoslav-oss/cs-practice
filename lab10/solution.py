@@ -25,7 +25,8 @@ def matrix_multiply(left, right):
 
 def transpose_matrix(matrix):
     a = np.array(matrix)
-    return a.T
+    transpose = a.T
+    return transpose.tolist()
 
 def solve_system(matrix, vector):
     a1 = np.array(matrix)
