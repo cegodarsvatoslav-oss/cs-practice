@@ -18,4 +18,13 @@ def  change_vector(values):
     copy_a = a.copy()
     copy_a[2:5] = 99
     copy_a[::2] = -1
+    return copy_a
 
+def  cap_above(values, limit):
+    a = np.array(values)
+    a = a[a > limit, limit]
+    return a
+
+def celsius_to_fahrenheit(values):
+    a = np.array(values)
+    return a * 9/5 + 32
